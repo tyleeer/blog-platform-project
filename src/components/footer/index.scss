@@ -1,0 +1,98 @@
+.footer {
+    color: white;
+    background: rgb(18, 24, 38);
+    padding: 6rem 6rem 4rem 6rem;
+    border-top: 1dvh solid rgb(254, 249, 1);
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    &__credit {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+
+        &--list{
+            display: flex;
+            gap: 2rem;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: normal;
+            gap: 0rem;
+        }
+    }
+    
+    &__nav--list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+    
+    button {
+        width: 120px;
+        height: 45px;
+        padding: 8px;
+        outline: none;
+        border: 2px solid white;
+        border-radius: 8px;
+        color: white;
+        background: rgb(18, 24, 38);
+        font-weight: bold;
+        display: none;
+
+        position: absolute;
+        top: 6rem;
+        right: 6rem;
+    
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            scale: 95%;
+        }
+
+        @media (min-width: 628px) {
+            display: block;
+        }
+    }
+}

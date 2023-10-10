@@ -1,0 +1,86 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 7%;
+    border: black;
+    border-top: 1dvh solid rgb(254, 249, 1);
+    background: rgb(255,255,255,.7);
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 2rem;
+    backdrop-filter: blur(6px);
+
+    @media (min-width: 768px) {
+        padding: 0.5rem 4rem;
+    }
+
+    &__logo {
+        width: 50%;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        @media (min-width: 768px) {
+            width: 10%;
+        }
+    }
+    &__nav {
+        list-style-type: none;
+        width: 80%;
+        
+        display: none;
+        justify-content: end;
+        gap: 1rem;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        a {
+            &:hover {
+                cursor: pointer;
+            }
+            
+            &:active {
+                scale: 95%;
+            }
+        }
+    }
+    &__btn {
+        width: 50%;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: end;
+
+        @media (min-width: 768px) {
+            width: 10%;
+            justify-content: center;
+        }
+    }
+
+    button {
+        width: 60px;
+        min-width: 60px;
+        aspect-ratio: 3/2;
+        outline: none;
+        border: 2px solid rgb(20, 24, 40);
+        border-radius: 8px;
+        font-weight: bold;
+    
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            scale: 95%;
+        }
+        &:nth-child(2) {
+            color: white;
+            background: rgb(20, 24, 40);
+        }
+    }
+}
+
